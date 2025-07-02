@@ -291,3 +291,23 @@ ul {
 .login__link:hover {
     color: #27548A;
 }
+
+.help.button {
+    border: 2px solid #4975ac;
+    background: #0F172A;
+    border-radius: 10px;
+    color: #F5EEDC;
+    padding: 15px;
+    font: inherit;
+    width: auto;
+    height: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.help_button:hover {
+    color: #F8FAFC;
+    background:  #0F172A;
+    
+}

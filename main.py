@@ -2,7 +2,7 @@
 from flask import Flask, render_template,request, redirect
 # Conectando a la biblioteca de bases de datos
 from flask_sqlalchemy import SQLAlchemy
-
+import speech
 
 app = Flask(__name__)
 # Conectando SQLite
@@ -113,7 +113,13 @@ def form_create():
     else:
         return render_template('create_card.html')
 
-
+@app.route("/voice")
+def voices():
+    try: 
+        text = speech.speech_es()
+    except:
+        text = "Algo salió mal"
+    return render_template("create_card.html", text=text)
 
 
 
